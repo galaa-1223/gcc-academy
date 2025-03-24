@@ -15,18 +15,16 @@ const MainBanner = () => {
           <div className="col-md-12 pb--120 pt--70 space-responsive-xxl">
             <div className="content">
               <div className="inner">
-                <div className="rbt-new-badge rbt-new-badge-one">
+                {/* <div className="rbt-new-badge rbt-new-badge-one">
                   <span className="rbt-new-badge-icon">🏆</span> The Leader in
                   Online Learning
-                </div>
+                </div> */}
 
                 <h1 className="title">
-                  Build The Skills <br /> To Drive Your Career.
+                  Title
                 </h1>
                 <p className="description">
-                  Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                  amet sint.
-                  <strong> Velit officia consequat.</strong>
+                  text
                 </p>
                 <div className="slider-btn">
                   <Link
@@ -34,7 +32,7 @@ const MainBanner = () => {
                     href="#"
                   >
                     <span className="icon-reverse-wrapper">
-                      <span className="btn-text">View Course</span>
+                      <span className="btn-text">Цааш нь ...</span>
                       <span className="btn-icon">
                         <i className="feather-arrow-right"></i>
                       </span>

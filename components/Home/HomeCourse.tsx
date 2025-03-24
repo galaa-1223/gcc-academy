@@ -80,7 +80,7 @@ const HomeCourse = ({ start, end }: HomeCourseType) => {
                       className="rbt-btn-link"
                       href={`/course-details/${data.id}`}
                     >
-                      Learn More
+                      Дэлгэрэнгүй
                       <i className="feather-arrow-right"></i>
                     </Link>
                   </div>

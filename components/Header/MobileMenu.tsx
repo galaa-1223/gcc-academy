@@ -7,6 +7,7 @@ import logo from "@/public/images/logo/logo.png";
 
 import Nav from "./Nav";
 import { useAppContext } from "@/context/Context";
+import data from '@/data/site.json'
 
 const MobileMenu = () => {
 
@@ -37,59 +38,57 @@ const MobileMenu = () => {
                 </button>
               </div>
             </div>
+            {data.description && (
             <p className="description">
-              Histudy is a education website template. You can customize all.
+              {data.description}
             </p>
+            )}
             <ul className="navbar-top-left rbt-information-list justify-content-start">
+              {data.contact.email.name && (
               <li>
-                <Link href="mailto:hello@example.com">
-                  <i className="feather-mail"></i>example@gmail.com
+                <Link href={`mailto:${data.contact.email.link}`}>
+                  <i className="feather-mail"></i>{data.contact.email.name}
                 </Link>
               </li>
+              )}
+              {data.contact.phone.name && (
               <li>
-                <Link href="#">
-                  <i className="feather-phone"></i>(302) 555-0107
+                <Link href={`tel:${data.contact.phone.tel}`}>
+                  <i className="feather-phone"></i>{data.contact.phone.name}
                 </Link>
               </li>
+              )}
             </ul>
           </div>
 
           <Nav />
 
           <div className="mobile-menu-bottom">
-            <div className="rbt-btn-wrapper mb--20">
+            {/* <div className="rbt-btn-wrapper mb--20">
               <Link
                 className="rbt-btn btn-border-gradient radius-round btn-sm hover-transform-none w-100 justify-content-center text-center"
                 href="#"
               >
                 <span>Enroll Now</span>
               </Link>
-            </div>
+            </div> */}
 
             <div className="social-share-wrapper">
-              <span className="rbt-short-title d-block">Find With Us</span>
-              <ul className="social-icon social-default transparent-with-border justify-content-start mt--20">
-                <li>
-                  <Link href="https://www.facebook.com/">
-                    <i className="feather-facebook"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.twitter.com">
-                    <i className="feather-twitter"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.instagram.com/">
-                    <i className="feather-instagram"></i>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://www.linkdin.com/">
-                    <i className="feather-linkedin"></i>
-                  </Link>
-                </li>
-              </ul>
+            {data.contact.socials && (
+              <>
+                <span className="rbt-short-title d-block">Бидэнтэй нэгдэх</span>
+                <ul className="social-icon social-default transparent-with-border justify-content-start mt--20">
+                  {data.contact.socials.map((social: {name: string, href: string, icon: string}, index:number) => (
+                    <li key={index}>
+                      <Link href={social.href} title={social.name} target="_blank">
+                        <i className={social.icon}></i>
+                      </Link>
+                    </li>
+                    )
+                  )}
+                </ul>
+              </>
+            )}
             </div>
           </div>
         </div>

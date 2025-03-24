@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { useSession } from "next-auth/react"
 import Link from "next/link";
 import Image from "next/image";
 
@@ -22,6 +23,8 @@ const HeaderMain = ({
   navigationEnd,
   container,
 }: HeaderMainType) => {
+
+  const { data: session, status } = useSession()
 
   const [isSticky, setIsSticky] = useState(false);
   const { isLightTheme } = useAppContext();
@@ -78,19 +81,29 @@ const HeaderMain = ({
               </div>
 
               <div className="header-info d-none d-lg-block">
-                <Category />
+                {/* <Category /> */}
               </div>
             </div>
 
             <div className="rbt-main-navigation d-none d-xl-block">
               <Nav />
             </div>
-
+            {status === "authenticated" ? (
             <HeaderRight 
               userType="Admin"
               btnText="Enroll Now"
               btnClass="rbt-marquee-btn marquee-auto btn-border-gradient radius-round btn-sm hover-transform-none"
+              authenticated={true}
             />
+            ):(
+              <HeaderRight 
+              userType="Нэвтрэх"
+              btnText="Enroll Now"
+              btnClass="rbt-marquee-btn marquee-auto btn-border-gradient radius-round btn-sm hover-transform-none"
+              hrefLink="/login"
+              authenticated={true}
+            />
+            )}
           </div>
         </div>
         <Search />

@@ -95,7 +95,7 @@ const About = () => {
             <div className="col-lg-6">
               <div className="inner pl--50 pl_sm--0 pl_md--0">
                 <div className="section-title text-start">
-                  <span className="subtitle bg-coral-opacity">{data.tag}</span>
+                  {/* <span className="subtitle bg-coral-opacity">{data.tag}</span> */}
                   <h2 className="title">
                     {data.title} <br /> {data.subTitle}
                   </h2>
@@ -103,7 +103,7 @@ const About = () => {
 
                 <p className="description mt--30">{data.desc}</p>
 
-                <div className="rbt-feature-wrapper mt--20 ml_dec_20">
+                {/* <div className="rbt-feature-wrapper mt--20 ml_dec_20">
                   {data.children.map((item, innerIndex) => (
                     <div
                       className="rbt-feature feature-style-2 rbt-radius"
@@ -124,7 +124,7 @@ const About = () => {
                       </div>
                     </div>
                   ))}
-                </div>
+                </div> */}
 
                 <div className="about-btn mt--40">
                   <Link
@@ -132,7 +132,7 @@ const About = () => {
                     href="#"
                   >
                     <span className="icon-reverse-wrapper">
-                      <span className="btn-text">More About Us</span>
+                      <span className="btn-text">Цааш нь...</span>
                       <span className="btn-icon">
                         <i className="feather-arrow-right"></i>
                       </span>

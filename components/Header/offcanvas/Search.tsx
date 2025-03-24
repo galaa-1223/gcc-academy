@@ -17,21 +17,21 @@ const Search = () => {
           <div className="row">
             <div className="col-lg-12">
               <form action="#">
-                <input type="text" placeholder="What are you looking for?" />
+                <input type="text" placeholder="Хайлт хийх..." />
                 <div className="submit-btn">
                   <Link className="rbt-btn btn-gradient btn-md" href="#">
-                    Search
+                    Хайлт
                   </Link>
                 </div>
               </form>
             </div>
           </div>
 
-          <div className="rbt-separator-mid">
+          {/* <div className="rbt-separator-mid">
             <hr className="rbt-separator m-0" />
-          </div>
+          </div> */}
 
-          <div className="row g-4 pt--30 pb--60">
+          {/* <div className="row g-4 pt--30 pb--60">
             <div className="col-lg-12">
               <div className="section-title">
                 <h5 className="rbt-title-style-2">Our Top Course</h5>
@@ -79,7 +79,7 @@ const Search = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </>

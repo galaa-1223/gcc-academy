@@ -1,0 +1,44 @@
+{
+  "name": "GCC Academy",
+  "subname": "Голомт капитал сургалтын сайт",
+  "description": "Голомт капитал сургалтын сайт",
+  "contact": {
+      "socials": [
+        {
+          "name": "Facebook",
+          "href": "https://www.facebook.com/",
+          "icon": "feather-facebook"
+        },
+        {
+          "name": "Twitter",
+          "href": "https://www.facebook.com/",
+          "icon": "feather-twitter"
+        },
+        {
+          "name": "Instagram",
+          "href": "https://www.facebook.com/",
+          "icon": "feather-instagram"
+        },
+        {
+          "name": "Linked In",
+          "href": "https://www.facebook.com/",
+          "icon": "feather-linkedin"
+        },
+        {
+          "name": "Youtube",
+          "href": "https://www.facebook.com/",
+          "icon": "feather-youtube"
+        }
+      ],
+      "email": {
+        "name": "info@golomtcapital.com",
+        "link": "info@golomtcapital.com"
+      },
+      "phone": {
+        "name": "(976) 7712-1530",
+        "tel": "+97677121530"
+      },
+      "location": "Ulaanbaatar, Mongolia"
+    },
+    "copyright": "Copyright © 2025 All Rights Reserved"
+}

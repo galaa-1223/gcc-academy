@@ -8,10 +8,12 @@ import { useAppContext } from "@/context/Context";
 type HeaderRightType = {
   btnClass: string;
   btnText: string;
-  userType: string
+  userType: string;
+  hrefLink?: any;
+  authenticated: boolean;
 }
 
-const HeaderRight = ({ btnClass, btnText, userType }: HeaderRightType) => {
+const HeaderRight = ({ ...props }: HeaderRightType) => {
 
   const { mobile, setMobile, search, setSearch } = useAppContext();
 
@@ -29,28 +31,38 @@ const HeaderRight = ({ btnClass, btnText, userType }: HeaderRightType) => {
             <i className="feather-search"></i>
           </Link>
         </li>
-
+        {!props.authenticated ? (
         <li className="account-access rbt-user-wrapper d-none d-xl-block">
           <Link href="#">
             <i className="feather-user"></i>
-            {userType}
+            {props.userType}
           </Link>
           <User />
         </li>
+        ):(
+        <li className="account-access rbt-user-wrapper d-none d-xl-block">
+          <Link href={props.hrefLink}>
+            <i className="feather-user"></i>
+            {props.userType}
+          </Link>
+        </li> 
+        )}
 
         <li className="access-icon rbt-user-wrapper d-block d-xl-none">
-          <Link className="rbt-round-btn" href="#">
+          <Link className="rbt-round-btn" href={!props.authenticated ? "#" : props.hrefLink}>
             <i className="feather-user"></i>
           </Link>
+          {!props.authenticated ? (
           <User />
+          ):("")}
         </li>
       </ul>
 
-      <div className="rbt-btn-wrapper d-none d-xl-block">
+      {/* <div className="rbt-btn-wrapper d-none d-xl-block">
         <Link className={`rbt-btn ${btnClass}`} href="#">
           <span data-text={`${btnText}`}>{btnText}</span>
         </Link>
-      </div>
+      </div> */}
 
       <div className="mobile-menu-bar d-block d-xl-none">
         <div className="hamberger">

@@ -6,15 +6,8 @@ import React, { useEffect, useState } from 'react';
 import * as z from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { signIn, useSession } from 'next-auth/react';
-
+import { LoginSchema, LoginType } from '@/lib/formValidationSchemas'
 // import { loginType } from "@/type/auth";
-
-export const LoginSchema  = z.object({
-  email: z.string().min(5).email().toLowerCase().trim(),
-  password: z.string().trim().min(6, { message: 'Password must be at least 6 characters' } ).max(12, { message: 'Password must be not more than 12 characters' })
-})
-
-export type LoginType = z.infer<typeof LoginSchema>
 
 const Login = () => {
 

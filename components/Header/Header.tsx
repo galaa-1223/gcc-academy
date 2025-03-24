@@ -17,7 +17,7 @@ const Header = ({ headerSticky }: HeaderType) => {
     <>
       <DarkSwitch isLight={isLightTheme} switchTheme={toggleTheme} />
       <header className="rbt-header rbt-header-10">
-        <HeaderTopBar />
+        {/* <HeaderTopBar /> */}
         <HeaderTop 
           bgColor="bg-not-transparent bg-color-darker"
           gapSpaceBetween="header-space-betwween"

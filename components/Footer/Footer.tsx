@@ -5,6 +5,7 @@ import logo from "@/public/images/logo/logo.png";
 import logoLight from "@/public/images/dark/logo/logo-light.png";
 
 import FooterData from "@/data/footer.json";
+import data from "@/data/site.json";
 import SingleFooter from "./SingleFooter";
 import CopyRight from "./CopyRight";
 import { useAppContext } from "@/context/Context";
@@ -45,15 +46,15 @@ const Footer = () => {
                         </Link>
                       </div>
 
-                      <p className="description mt--20">{footer.description}</p>
+                      <p className="description mt--20">{data.description}</p>
 
                       <div className="contact-btn mt--30">
                         <Link
                           className="rbt-btn hover-icon-reverse btn-border-gradient radius-round"
-                          href="#"
+                          href="/contact"
                         >
                           <div className="icon-reverse-wrapper">
-                            <span className="btn-text">Contact With Us</span>
+                            <span className="btn-text">Холбоо барих</span>
                             <span className="btn-icon">
                               <i className="feather-arrow-right"></i>
                             </span>
@@ -68,38 +69,38 @@ const Footer = () => {
 
                   <SingleFooter
                     classOne="offset-lg-1 col-lg-2 col-md-6 col-sm-6 col-12 mt--30"
-                    title="Useful Links"
+                    title="Хэрэгцээт цэс"
                     footerType={footer.usefulLinks}
                   />
 
                   <SingleFooter
                     classOne="col-lg-2 col-md-6 col-sm-6 col-12 mt--30"
-                    title="Our Company"
+                    title="Хялбар цэс"
                     footerType={footer.ourCompany}
                   />
 
                   <div className="col-lg-3 col-md-6 col-sm-6 col-12 mt--30">
                     <div className="footer-widget">
-                      <h5 className="ft-title">Get Contact</h5>
+                      <h5 className="ft-title">Холбоо барих</h5>
                       <ul className="ft-link">
                         <li>
-                          <span>Phone:</span>
-                          <Link href="#">{footer.phone}</Link>
+                          <span>Утас:</span>
+                          <Link href={`tel:${data.contact.phone.tel}`}>{data.contact.phone.name}</Link>
                         </li>
                         <li>
-                          <span>E-mail:</span>
-                          <Link href="mailto:hr@example.com">
-                            {footer.mail}
+                          <span>Имэйл:</span>
+                          <Link href={`mailto:${data.contact.email.link}`}>
+                            {data.contact.email.name}
                           </Link>
                         </li>
                         <li>
-                          <span>Location:</span> {footer.address}
+                          <span>Хаяг:</span> {data.contact.location}
                         </li>
                       </ul>
                       <ul className="social-icon social-default icon-naked justify-content-start mt--20">
-                        {footer.socialLink.map((value, innerIndex) => (
+                        {data.contact.socials.map((value, innerIndex) => (
                           <li key={innerIndex}>
-                            <Link href={value.link}>
+                            <Link href={value.href} title={value.name}>
                               <i className={value.icon}></i>
                             </Link>
                           </li>

@@ -28,21 +28,21 @@ const Nav = () => {
   return (
     <nav className="mainmenu-nav">
       <ul className="mainmenu">
-        <li className="with-megamenu has-menu-child-item position-static">
+        <li className="">
           <Link
             className={`${activeMenuItem === "home" ? "open" : ""}`}
             onClick={() => toggleMenuItem("home")}
-            href="#"
+            href="/"
           >
-            Home
-            <i className="feather-chevron-down"></i>
+            Эхлэл
+            {/* <i className="feather-chevron-down"></i> */}
           </Link>
-          <div
+          {/* <div
             className={`rbt-megamenu menu-skin-dark ${
               activeMenuItem === "home" ? "active d-block" : ""
             }`}
-          >
-            <div className="wrapper">
+          > */}
+            {/* <div className="wrapper">
               <div className="row row--15 home-plesentation-wrapper single-dropdown-menu-presentation">
                 {MenuData &&
                   MenuData.menuData.map((data, index) => {
@@ -103,11 +103,38 @@ const Nav = () => {
                     return null;
                   })}
               </div>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
+        </li>
+        <li className="">
+          <Link
+            className={`${activeMenuItem === "study" ? "open" : ""}`}
+            onClick={() => toggleMenuItem("study")}
+            href="#"
+          >
+            Сургалтууд
+          </Link>
+        </li>
+        <li className="">
+          <Link
+            className={`${activeMenuItem === "news" ? "open" : ""}`}
+            onClick={() => toggleMenuItem("news")}
+            href="#"
+          >
+            Мэдээ мэдээлэл
+          </Link>
+        </li>
+        <li className="">
+          <Link
+            className={`${activeMenuItem === "contact" ? "open" : ""}`}
+            onClick={() => toggleMenuItem("contact")}
+            href="#"
+          >
+            Холбоо барих
+          </Link>
         </li>
 
-        <li className="with-megamenu has-menu-child-item">
+        {/* <li className="with-megamenu has-menu-child-item">
           <Link
             className={`${activeMenuItem === "courses" ? "open" : ""}`}
             href="#"
@@ -185,8 +212,8 @@ const Nav = () => {
               </div>
             </div>
           </div>
-        </li>
-        <li className="has-dropdown has-menu-child-item">
+        </li> */}
+        {/* <li className="has-dropdown has-menu-child-item">
           <Link
             className={`${activeMenuItem === "dashboard" ? "open" : ""}`}
             href="#"
@@ -229,8 +256,8 @@ const Nav = () => {
                 return null;
               })}
           </ul>
-        </li>
-        <li className="with-megamenu has-menu-child-item position-static">
+        </li> */}
+        {/* <li className="with-megamenu has-menu-child-item position-static">
           <Link
             href="#"
             className={`${activeMenuItem === "pages" ? "open" : ""}`}
@@ -304,8 +331,8 @@ const Nav = () => {
               </div>
             </div>
           </div>
-        </li>
-        <li className="with-megamenu has-menu-child-item position-static">
+        </li> */}
+        {/* <li className="with-megamenu has-menu-child-item position-static">
           <Link
             href="#"
             className={`${activeMenuItem === "elements" ? "open" : ""}`}
@@ -362,8 +389,8 @@ const Nav = () => {
               </div>
             </div>
           </div>
-        </li>
-        <li className="with-megamenu has-menu-child-item position-static">
+        </li> */}
+        {/* <li className="with-megamenu has-menu-child-item position-static">
           <Link
             href="#"
             className={`${activeMenuItem === "blog" ? "open" : ""}`}
@@ -468,7 +495,7 @@ const Nav = () => {
               </div>
             </div>
           </div>
-        </li>
+        </li> */}
       </ul>
     </nav>
   )

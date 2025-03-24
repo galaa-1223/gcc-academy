@@ -86,7 +86,7 @@ export const authOptions: AuthOptions = {
                 params.session.user.email = params.token.email;
             }
 
-            console.log(params.session.user)
+            // console.log(params.session.user)
 
             return params.session;
         },

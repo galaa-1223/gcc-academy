@@ -64,7 +64,7 @@ const HeaderTop = ({
                         <div className="rbt-header-top-news">
                           <div className="inner">
                             <div className="content">
-                              <span className="rbt-badge variation-02 bg-color-primary color-white radius-round">
+                              {/* <span className="rbt-badge variation-02 bg-color-primary color-white radius-round">
                                 {item.badgeText}
                               </span>
                               <span className="news-text">
@@ -75,7 +75,7 @@ const HeaderTop = ({
                                   alt="Hand Emojji Images"
                                 />
                                 {item.introPrice}
-                              </span>
+                              </span> */}
                             </div>
                           </div>
                         </div>
@@ -83,7 +83,7 @@ const HeaderTop = ({
                     </div>
                   </div>
                   <div className="rbt-header-sec-col rbt-header-right mt_md--10 mt_sm--10">
-                    <div className="rbt-header-content justify-content-start justify-content-lg-end">
+                    {/* <div className="rbt-header-content justify-content-start justify-content-lg-end">
                       <div className="rbt-separator d-none d-xl-block"></div>
                       <div className="header-info">
                         <ul className="rbt-dropdown-menu switcher-language">
@@ -151,7 +151,7 @@ const HeaderTop = ({
                           ))}
                         </ul>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               ))}

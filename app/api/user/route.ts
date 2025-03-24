@@ -11,6 +11,7 @@ import { hash } from 'bcrypt'
 //   })
 
 export async function POST(req: Request){
+
   try {
     const body = await req.json();
     const { username, email , password } = body;
@@ -45,7 +46,7 @@ export async function POST(req: Request){
     return NextResponse.json({ user: newUser, message: "User created successful"}, { status: 201});
     // return NextResponse.json({ body });
   } catch(error){
-    return NextResponse.json({ message: "Something went wrong!"}, { status: 500});
+    return NextResponse.json({ message: "Something went wrong!", error: error}, { status: 500});
   }
 }
 
